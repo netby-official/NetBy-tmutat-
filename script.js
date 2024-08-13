@@ -50,3 +50,8 @@ function submitFeedback() {
     alert('Köszönjük a visszajelzésed!');
     document.getElementById('feedbackForm').style.display = 'none';
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Például itt lehetne AJAX kérés, hogy ellenőrizzük a fájl létezését,
+    // de mivel a fájl nem található, csak az alap HTML és CSS mutatkozik meg.
+});
