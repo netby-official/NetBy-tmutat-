@@ -17,6 +17,25 @@ body {
     border-radius: 12px; /* Kerekített sarkok növelése */
 }
 
+/* Hibás üzenet stílusa */
+.error-message {
+    background-color: #f8d7da; /* Piros háttérszín */
+    color: #721c24; /* Sötétpiros szöveg szín */
+    border: 1px solid #f5c6cb; /* Piros keret szín */
+    border-radius: 4px; /* Kerekített sarkok */
+    padding: 15px; /* Bőséges padding */
+    margin: 20px auto; /* Margó a középre igazításhoz */
+    max-width: 600px; /* Maximum szélesség */
+    text-align: center; /* Szöveg középre igazítása */
+    opacity: 0; /* Kezdetben láthatatlan */
+    transform: translateY(-20px); /* Elmozdulás a láthatatlan állapotban */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Animáció beállítása */
+}
+
+.error-message.visible {
+    opacity: 1; /* Teljes láthatóság */
+    transform: translateY(0); /* Vissza a helyére */
+}
 /* Fejléc */
 h1 {
     margin-bottom: 20px;
