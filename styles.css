@@ -10,12 +10,12 @@ body {
 }
 
 .container {
-    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 350px;
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 h1 {
