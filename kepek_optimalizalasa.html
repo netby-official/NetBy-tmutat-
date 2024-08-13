@@ -25,4 +25,41 @@
         <h2>3. lépés: Képméret csökkentése</h2>
         <p>Győződj meg róla, hogy a képek mérete (pixelben) megfelel a weboldalon való megjelenítéshez. Például, ha egy kép 4000x3000 pixel méretű, de csak 800x600 pixel méretben jelenik meg az oldalon, akkor érdemes a kép méretét lecsökkenteni erre a méretre.</p>
 
-        <h2
+        <h2>3. lépés: Képméret csökkentése (folytatás)</h2>
+        <p>Használhatsz képszerkesztő programokat, mint például a Photoshop vagy a GIMP, hogy átméretezd a képeket. Alternatív megoldásként használhatsz online eszközöket, például a <a href="https://www.resizeimage.net" target="_blank">ResizeImage.net</a> oldalt.</p>
+
+        <h2>4. lépés: Lazy loading alkalmazása</h2>
+        <p>A "lazy loading" technika lehetővé teszi, hogy a képek csak akkor töltődjenek be, amikor a felhasználó ténylegesen eléri őket a görgetés során. Ez különösen hasznos hosszú oldalak esetén, ahol sok kép található. Ehhez adj hozzá egy <code>loading="lazy"</code> attribútumot a képekhez:</p>
+        <pre><code>&lt;img src="example.jpg" alt="Példa kép" loading="lazy"&gt;</code></pre>
+        <p>Ezzel az egyszerű módszerrel csökkentheted a weboldal kezdeti betöltési idejét.</p>
+
+        <h2>5. lépés: Képek optimalizálása CSS sprite-okkal</h2>
+        <p>A CSS sprite egy technika, amely egyesíti több kis kép (ikon, gomb, stb.) egy nagyobb képbe. Ezzel csökkenthető a HTTP kérések száma, ami gyorsítja az oldal betöltését. A sprite-ok használatához:</p>
+        <ul>
+            <li>Hozz létre egy nagy képet, amely tartalmazza az összes kisebb képet.</li>
+            <li>Használd a <code>background-position</code> CSS tulajdonságot, hogy megjelenítsd az egyes képeket a nagy képből:</li>
+        </ul>
+        <pre><code>.icon {
+    width: 50px;
+    height: 50px;
+    background-image: url('sprite.png');
+}
+
+.icon-home {
+    background-position: 0 0;
+}
+
+.icon-search {
+    background-position: -50px 0;
+}</code></pre>
+        <p>Ebben a példában egy "sprite.png" nevű képet használunk, amely tartalmazza a különböző ikonokat. Az <code>icon-home</code> és <code>icon-search</code> osztályok az adott ikonok pozícióját határozzák meg.</p>
+
+        <h2>6. lépés: Képek megfelelő metaadatainak megadása</h2>
+        <p>Ne felejtsd el, hogy a képekhez megadd a megfelelő <code>alt</code> attribútumot, amely leírja a kép tartalmát. Ez segíti a keresőmotorokat és a látássérült felhasználókat, hogy jobban megértsék a kép jelentését:</p>
+        <pre><code>&lt;img src="example.jpg" alt="Példa kép leírása"&gt;</code></pre>
+        <p>A megfelelő <code>alt</code> attribútum használata javíthatja az oldal SEO-ját és felhasználói élményét.</p>
+
+        <a href="index.html">Vissza a főoldalra</a>
+    </div>
+</body>
+</html>
