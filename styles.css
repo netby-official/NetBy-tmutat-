@@ -1,84 +1,97 @@
+/* Általános stílusok */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9; /* Finomabb háttérszín */
     margin: 0;
     padding: 0;
-    /* Flexbox eltávolítása */
+    color: #333; /* Sötétebb szövegszín a jobb olvashatóságért */
 }
 
+/* Konténer */
 .container {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 30px; /* Bővebb padding */
     margin: 20px auto;
     max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* A flex és középre igazítás itt is eltávolítva */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Finomabb árnyék */
+    border-radius: 12px; /* Kerekített sarkok növelése */
 }
 
+/* Fejléc */
 h1 {
     margin-bottom: 20px;
+    color: #222; /* Sötétebb szín a jobb kontrasztért */
+    font-size: 28px; /* Nagyobb betűméret */
+    font-weight: 600; /* Vastagabb betűk */
 }
 
+/* Szövegbevitel */
 input[type="text"] {
     width: 100%;
-    padding: 10px;
+    padding: 14px; /* Kényelmesebb méret */
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Fókusz hatás */
 }
 
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Fókusz árnyék */
+}
+
+/* Fun Fact */
 .fun-fact {
     margin-bottom: 20px;
     font-style: italic;
     color: #007bff;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 4px;
+    padding: 14px;
+    background-color: #eaf4ff; /* Lábbalabb háttérszín */
+    border-radius: 8px;
     border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.1); /* Finom árnyék */
 }
 
+/* Accordion */
 .accordion {
     text-align: left;
 }
 
 .accordion-item {
-    margin-bottom: 10px;
+    margin-bottom: 12px; /* Növelt margó */
 }
 
 .accordion-button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 14px; /* Kényelmesebb méret */
     width: 100%;
     text-align: left;
     cursor: pointer;
     outline: none;
-    font-size: 16px;
-    border-radius: 4px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Animációk hozzáadása */
 }
 
 .accordion-button:hover {
     background-color: #0056b3;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Finom árnyék */
 }
 
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f9f9f9;
-    padding: 0 10px;
-    border-radius: 4px;
+    transition: max-height 0.4s ease-out;
+    background-color: #f1f1f1; /* Lábbalabb háttérszín */
+    padding: 10px 14px; /* Kényelmesebb padding */
+    border-radius: 8px;
 }
 
-.accordion-content ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 10px 0;
-}
-
+/* Listaelemek */
 .accordion-content ul li {
-    padding: 8px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #ddd;
 }
 
@@ -87,23 +100,27 @@ input[type="text"] {
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 200px; /* Megfelelő magasság az elemekhez */
+    max-height: 500px; /* Megnövelt magasság */
 }
 
+/* Visszajelzés gomb */
 .feedback-button {
     margin-top: 20px;
     background-color: #28a745;
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 14px; /* Kényelmesebb méret */
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Animációk hozzáadása */
 }
 
 .feedback-button:hover {
     background-color: #218838;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.1); /* Finom árnyék */
 }
 
+/* Visszajelző űrlap */
 .feedback-form {
     display: none;
     margin-top: 10px;
@@ -112,32 +129,32 @@ input[type="text"] {
 
 .feedback-form textarea {
     width: 100%;
-    height: 80px;
-    padding: 10px;
+    height: 120px; /* Magasabb textarea */
+    padding: 14px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-bottom: 10px;
     resize: none;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Animációk hozzáadása */
+}
+
+.feedback-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Fókusz árnyék */
 }
 
 .feedback-form button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 14px; /* Kényelmesebb méret */
+    border-radius: 8px;
     cursor: pointer;
     width: 100%;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Animációk hozzáadása */
 }
 
 .feedback-form button:hover {
     background-color: #0056b3;
-}
-
-.accordion-content ul li[style*="display: none"] {
-    display: none !important;
-}
-
-.accordion-content ul li[style*="display: none"] + li {
-    border-top: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Finom árnyék */
 }
