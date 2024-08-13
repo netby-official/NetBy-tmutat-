@@ -55,3 +55,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // Például itt lehetne AJAX kérés, hogy ellenőrizzük a fájl létezését,
     // de mivel a fájl nem található, csak az alap HTML és CSS mutatkozik meg.
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Az error-message elem lekérése
+    var errorMessage = document.querySelector(".error-message");
+    
+    // A hibaüzenet animált megjelenítése
+    if (errorMessage) {
+        errorMessage.classList.add("visible");
+    }
+});
