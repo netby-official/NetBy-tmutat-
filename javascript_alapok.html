@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript alapok</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript alapok</h1>
+        <p>JavaScript egy dinamikus programozási nyelv, amelyet a weboldalak interaktivitásának növelésére használnak. Az alábbiakban bemutatjuk a JavaScript alapjait:</p>
+        
+        <h2>1. lépés: JavaScript beillesztése HTML-be</h2>
+        <p>JavaScript kódot beilleszthetsz egy HTML fájlba a <code>&lt;script&gt;</code> elem használatával:</p>
+        <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+        <p>Vagy közvetlenül beágyazhatod a kódot:</p>
+        <pre><code>&lt;script&gt;
+    alert('Helló világ!');
+&lt;/script&gt;</code></pre>
+
+        <h2>2. lépés: Alapvető JavaScript szintaxis</h2>
+        <p>Íme néhány alapvető JavaScript szintaktikai elem:</p>
+        <ul>
+            <li><strong>Változók:</strong> <code>let x = 10;</code></li>
+            <li><strong>Függvények:</strong> <code>function greet() { alert('Helló!'); }</code></li>
+            <li><strong>Objektumok:</strong> <code>let person = { name: 'John', age: 30 };</code></li>
+        </ul>
+
+        <h2>3. lépés: DOM manipuláció</h2>
+        <p>A Document Object Model (DOM) segítségével a JavaScript programozók módosíthatják a HTML elemeket:</p>
+        <pre><code>document.getElementById('myElement').innerText = 'Új szöveg';</code></pre>
+
+        <h2>4. lépés: Eseménykezelés</h2>
+        <p>Az eseménykezelés lehetővé teszi, hogy reakciókat hozz létre felhasználói interakciókra:</p>
+        <pre><code>document.getElementById('myButton').addEventListener('click', function() {
+    alert('Gombra kattintottál!');
+});</code></pre>
+
+        <a href="index.html">Vissza a főoldalra</a>
+    </div>
+</body>
+</html>
