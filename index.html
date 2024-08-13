@@ -5,41 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netby Útmutató</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ideiglenes stílusok a frissített elemekhez */
+        .popular-guides {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+        .favorites {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+        .notifications {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+        .social-buttons {
+            margin: 20px 0;
+        }
+        .social-buttons a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .faq {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+        .faq-item {
+            margin-bottom: 10px;
+        }
+        .faq-item h3 {
+            margin: 0;
+            cursor: pointer;
+        }
+        .faq-item p {
+            display: none;
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Netby Útmutató</h1>
-        
+
+        <!-- Kategória szűrő -->
+        <div class="category-filter">
+            <label for="category">Kategória szűrő:</label>
+            <select id="category" onchange="filterByCategory()">
+                <option value="">Összes</option>
+                <option value="how-to">Hogyan kell?</option>
+                <option value="troubleshooting">Mit tegyek?</option>
+            </select>
+        </div>
+
         <!-- Keresőmező -->
-        <input type="text" id="search" placeholder="Keresés az útmutatók között..." onkeyup="searchGuides()">
-        
+        <div style="position: relative;">
+            <input type="text" id="search" placeholder="Keresés az útmutatók között..." onkeyup="showSuggestions()">
+            <div id="suggestions" class="search-suggestions"></div>
+        </div>
+
         <!-- Érdekes tények -->
         <div id="funFact" class="fun-fact"></div>
+        <button onclick="refreshFunFact()">Frissít</button>
 
-        <div class="accordion">
-            <div class="accordion-item">
-                <button class="accordion-button">Hogyan kell?</button>
-                <div class="accordion-content">
-                    <ul>
-                        <li><a href="weboldal_keszitese.html">Weboldal készítése</a></li>
-                        <li><a href="kepek_optimalizalasa.html">Képek optimalizálása</a></li>
-                        <li><a href="szoveg_formazasa.html">Szöveg formázása HTML-ben</a></li>
-                        <li><a href="css_grid.html">CSS Grid használata</a></li>
-                        <li><a href="javascript_alapok.html">JavaScript alapok</a></li>
-                    </ul>
-                </div>
+        <!-- Weboldal statisztika -->
+        <div id="statistic" class="statistic">
+            <p>Weboldal látogatottság: <span id="visitCount">0</span> látogató</p>
+        </div>
+
+        <!-- Népszerű útmutatók -->
+        <div class="popular-guides">
+            <h2>Népszerű útmutatók</h2>
+            <ul>
+                <li><a href="weboldal_keszitese.html">Weboldal készítése</a></li>
+                <li><a href="kepek_optimalizalasa.html">Képek optimalizálása</a></li>
+                <li><a href="css_grid.html">CSS Grid használata</a></li>
+            </ul>
+        </div>
+
+        <!-- Kedvencek -->
+        <div class="favorites">
+            <h2>Kedvencek</h2>
+            <ul id="favoritesList">
+                <li>Jelenleg nincsenek kedvencek.</li>
+            </ul>
+        </div>
+
+        <!-- Értesítések -->
+        <div class="notifications">
+            <h2>Értesítések</h2>
+            <p>Új útmutatók és frissítések: <span id="notificationCount">0</span></p>
+            <button onclick="checkNotifications()">Ellenőriz</button>
+        </div>
+
+        <!-- Közösségi média gombok -->
+        <div class="social-buttons">
+            <h2>Ossza meg</h2>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=YOUR_URL" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=YOUR_URL" target="_blank">LinkedIn</a>
+        </div>
+
+        <!-- GYIK szekció -->
+        <div class="faq">
+            <h2>Gyakran Ismételt Kérdések</h2>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ('faq1')">Hogyan használhatom a keresőt?</h3>
+                <p id="faq1">A keresőmezőbe írva azonnal megjelennek a javaslatok és találatok az útmutatók között.</p>
             </div>
-            <div class="accordion-item">
-                <button class="accordion-button">Mit tegyek?</button>
-                <div class="accordion-content">
-                    <ul>
-                        <li><a href="hibas_weboldal.html">Amikor nem működik a weboldal</a></li>
-                        <li><a href="lassu_betoltes.html">Amikor lassú a betöltés</a></li>
-                        <li><a href="hibas_linkek.html">Amikor hibásak a linkek</a></li>
-                        <li><a href="css_hiba.html">Amikor nem jelenik meg a CSS</a></li>
-                        <li><a href="javascript_nem_fut.html">Amikor nem fut a JavaScript</a></li>
-                    </ul>
-                </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ('faq2')">Hogyan menthetem el a kedvenc útmutatóimat?</h3>
+                <p id="faq2">Kattints a csillag ikonra az útmutatók mellett, hogy hozzáadd őket a kedvencekhez.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ('faq3')">Miként tudok értesítéseket kapni?</h3>
+                <p id="faq3">Jelentkezz be, és válaszd ki az értesítési beállításokat az oldalon.</p>
             </div>
         </div>
 
@@ -49,7 +137,112 @@
             <textarea placeholder="Írd meg a véleményed..."></textarea>
             <button onclick="submitFeedback()">Küldés</button>
         </div>
+        <div id="feedback-success" class="feedback-success">
+            Köszönjük a visszajelzést!
+        </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        // Example functions for the new features
+
+        // Function to show suggestions
+        function showSuggestions() {
+            var input = document.getElementById('search');
+            var suggestions = document.getElementById('suggestions');
+            var query = input.value.toLowerCase();
+            var links = document.querySelectorAll('.accordion-content a');
+            var suggestionList = '';
+
+            if (query.length > 0) {
+                links.forEach(function(link) {
+                    if (link.textContent.toLowerCase().includes(query)) {
+                        suggestionList += '<div class="search-suggestion">' + link.textContent + '</div>';
+                    }
+                });
+
+                suggestions.innerHTML = suggestionList;
+                suggestions.style.display = suggestionList ? 'block' : 'none';
+            } else {
+                suggestions.style.display = 'none';
+            }
+        }
+
+        // Function to filter by category
+        function filterByCategory() {
+            var category = document.getElementById('category').value;
+            var links = document.querySelectorAll('.accordion-content a');
+
+            links.forEach(function(link) {
+                if (category === '' || link.classList.contains(category)) {
+                    link.style.display = 'list-item';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        }
+
+        // Function to refresh fun fact
+        function refreshFunFact() {
+            var facts = [
+                'A weboldalak betöltési ideje jelentősen befolyásolja a felhasználói élményt.',
+                'A modern böngészők már támogatják a CSS Grid-et.',
+                'A JavaScript az egyik legnépszerűbb programozási nyelv a webfejlesztésben.',
+                'Az optimalizált képek segítenek a weboldalak gyorsabb betöltésében.'
+            ];
+            var randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById('funFact').textContent = randomFact;
+        }
+
+        // Function to simulate feedback form submission
+        function submitFeedback() {
+            var feedbackForm = document.getElementById('feedbackForm');
+            var successMessage = document.getElementById('feedback-success');
+            
+            feedbackForm.style.display = 'none';
+            successMessage.style.display = 'block';
+            
+            // Simulate a network request
+            setTimeout(function() {
+                feedbackForm.style.display = 'block';
+                successMessage.style.display = 'none';
+                document.querySelector('#feedbackForm textarea').value = '';
+            }, 2000);
+        }
+
+        // Function to add to favorites
+        function addToFavorites(item) {
+            var favoritesList = document.getElementById('favoritesList');
+            var listItem = document.createElement('li');
+            listItem.textContent = item;
+            favoritesList.appendChild(listItem);
+        }
+
+        // Function to check notifications
+        function checkNotifications() {
+            var notificationCount = document.getElementById('notificationCount');
+            // Simulate fetching new notifications
+            var newNotifications = Math.floor(Math.random() * 10);
+            notificationCount.textContent = newNotifications;
+        }
+
+        // Function to toggle FAQ answers
+        function toggleFAQ(id) {
+            var faqItem = document.getElementById(id);
+            if (faqItem.style.display === 'none' || faqItem.style.display === '') {
+                faqItem.style.display = 'block';
+            } else {
+                faqItem.style.display = 'none';
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the statistics (this could be fetched from an API)
+            document.getElementById('visitCount').textContent = '1234';  // Placeholder value
+
+            // Refresh the fun fact on page load
+            refreshFunFact();
+        });
+    </script>
 </body>
 </html>
