@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid használata</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Grid használata</h1>
+        <p>A CSS Grid egy rendkívül erőteljes eszköz, amely lehetővé teszi komplex weboldalak elrendezésének létrehozását. Az alábbiakban bemutatjuk, hogyan használhatod a CSS Grid-et:</p>
+        
+        <h2>1. lépés: Grid konténer létrehozása</h2>
+        <p>A Grid rendszerhez először egy konténer elemet kell létrehoznod, amely az <code>display: grid;</code> beállítást használja:</p>
+        <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}</code></pre>
+        <p>Ez a kód három egyenlő oszlopot hoz létre, és 10px-es rést ad az elemek között.</p>
+
+        <h2>2. lépés: Grid elemek hozzáadása</h2>
+        <p>A Grid konténerben elhelyezett elemek automatikusan grid elemek lesznek. Az elemeket elhelyezheted a grid rendszerben az alábbi módon:</p>
+        <pre><code>.grid-item {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+}</code></pre>
+        <p>Ez a kód formázza a grid elemeket, így azok háttérszíne világosszürke lesz, középre igazított szöveggel.</p>
+
+        <h2>3. lépés: Grid vonalak használata</h2>
+        <p>Beállíthatod, hogy a grid elemek több sorra és oszlopra terjedjenek ki:</p>
+        <pre><code>.item1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}</code></pre>
+        <p>Ez a kód azt jelenti, hogy az <code>.item1</code> osztályú elem két oszlopra és két sorra terjed ki.</p>
+
+        <h2>4. lépés: Grid területek használata</h2>
+        <p>Grid területeket is definiálhatsz, hogy könnyebben kezelhesd az elrendezést:</p>
+        <pre><code>.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}</code></pre>
+        <p>Ez a kód egy olyan elrendezést hoz létre, ahol a fejléc az egész szélességben terjed, a bal oldali sáv és a fő tartalom külön helyet kapnak, és a lábléc szintén az egész szélességben terjed.</p>
+
+        <a href="index.html">Vissza a főoldalra</a>
+    </div>
+</body>
+</html>
