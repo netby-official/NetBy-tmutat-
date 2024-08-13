@@ -22,6 +22,20 @@ h1 {
     margin-bottom: 20px;
 }
 
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.fun-fact {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #007bff;
+}
+
 .accordion {
     text-align: left;
 }
@@ -73,4 +87,45 @@ h1 {
 
 .accordion-item.active .accordion-content {
     max-height: 200px; /* Megfelelő magasság az elemekhez */
+}
+
+.feedback-button {
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.feedback-button:hover {
+    background-color: #218838;
+}
+
+.feedback-form {
+    display: none;
+    margin-top: 10px;
+}
+
+.feedback-form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.feedback-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #0056b3;
 }
