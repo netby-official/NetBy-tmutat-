@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amikor lassú a betöltés</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Amikor lassú a betöltés</h1>
+        <p>Ha a weboldalad lassan töltődik be, az alábbi lépésekkel javíthatod a betöltési időt:</p>
+        
+        <h2>1. lépés: Képek optimalizálása</h2>
+        <p>Győződj meg arról, hogy a képek megfelelően vannak optimalizálva. Használj tömörítő eszközöket és megfelelő formátumokat, például WebP:</p>
+        <ul>
+            <li><a href="kepek_optimalizalasa.html">Képek optimalizálása</a></li>
+        </ul>
+
+        <h2>2. lépés: CSS és JavaScript minifikálása</h2>
+        <p>Minifikálj minden CSS és JavaScript fájlt, hogy csökkentsd a fájlméretet. Használj eszközöket, mint például a <a href="https://cssminifier.com/" target="_blank">CSS Minifier</a> és a <a href="https://www.javascript-minifier.com/" target="_blank">JavaScript Minifier</a>.</p>
+
+        <h2>3. lépés: CSS és JavaScript fájlok összevonása</h2>
+        <p>Ha lehetséges, vonj össze több CSS és JavaScript fájlt egyetlen fájlba, hogy csökkentsd a HTTP kérések számát.</p>
+
+        <h2>4. lépés: Aszinkron betöltés használata</h2>
+        <p>Használj aszinkron betöltést a JavaScript fájloknál, hogy ne blokkolják a weboldal betöltését:</p>
+        <pre><code>&lt;script src="script.js" async&gt;&lt;/script&gt;</code></pre>
+
+        <h2>5. lépés: Lazy loading alkalmazása</h2>
+        <p>Alkalmazd a "lazy loading" technikát a képekre és iframe-ekre, hogy azok csak akkor töltődjenek be, amikor a felhasználó látja őket:</p>
+        <pre><code>&lt;img src="example.jpg" alt="Példa kép" loading="lazy"&gt;</code></pre>
+
+        <h2>6. lépés: Weboldal cache-elése</h2>
+        <p>Engedélyezd a böngésző cache-elést a weboldal statikus elemeihez. Ezzel csökkentheted a szerverhez intézett kérések számát és gyorsíthatod a betöltést.</p>
+
+        <h2>7. lépés: CDN használata</h2>
+        <p>Használj tartalomelosztó hálózatokat (CDN) a statikus fájlok gyorsabb betöltésére. A CDN-ek több szerverről szolgálják ki a tartalmat, ami gyorsítja a betöltést.</p>
+
+        <a href="index.html">Vissza a főoldalra</a>
+    </div>
+</body>
+</html>
