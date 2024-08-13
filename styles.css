@@ -15,7 +15,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
+    width: 350px;
 }
 
 h1 {
@@ -34,6 +34,10 @@ input[type="text"] {
     margin-bottom: 20px;
     font-style: italic;
     color: #007bff;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #ddd;
 }
 
 .accordion {
@@ -106,6 +110,7 @@ input[type="text"] {
 .feedback-form {
     display: none;
     margin-top: 10px;
+    text-align: left;
 }
 
 .feedback-form textarea {
@@ -115,6 +120,7 @@ input[type="text"] {
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-bottom: 10px;
+    resize: none;
 }
 
 .feedback-form button {
@@ -124,8 +130,17 @@ input[type="text"] {
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%;
 }
 
 .feedback-form button:hover {
     background-color: #0056b3;
+}
+
+.accordion-content ul li[style*="display: none"] {
+    display: none !important;
+}
+
+.accordion-content ul li[style*="display: none"] + li {
+    border-top: 1px solid #ddd;
 }
