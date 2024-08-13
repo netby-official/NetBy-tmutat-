@@ -3,7 +3,7 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    /* A flexbox és középre igazítás eltávolítva */
+    /* Flexbox eltávolítása */
 }
 
 .container {
@@ -12,9 +12,7 @@ body {
     margin: 20px auto;
     max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Középre igazítás itt is, ha szükséges */
-    display: flex;
-    flex-direction: column;
+    /* A flex és középre igazítás itt is eltávolítva */
 }
 
 h1 {
