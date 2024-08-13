@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weboldal készítése</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weboldal készítése</h1>
+        <p>Ez az útmutató részletesen bemutatja, hogyan hozhatsz létre egy egyszerű weboldalt, még akkor is, ha sosem csináltál ilyet korábban.</p>
+        
+        <h2>1. lépés: HTML fájl létrehozása</h2>
+        <p>A HTML (HyperText Markup Language) a weboldalak alapvető építőköve. Egy egyszerű HTML fájl létrehozásához:</p>
+        <ul>
+            <li>Nyiss meg egy szövegszerkesztőt (például a Notepad++ vagy a Visual Studio Code programot).</li>
+            <li>Hozz létre egy új fájlt, és nevezd el <strong>index.html</strong>-nek.</li>
+            <li>Mentsd el a fájlt a számítógépeden egy új mappában, például „weboldalam” néven.</li>
+        </ul>
+
+        <h2>2. lépés: Alapvető HTML struktúra kialakítása</h2>
+        <p>A következő lépés a HTML fájl struktúrájának megadása. Ez határozza meg, hogy a böngésző hogyan értelmezze a tartalmat. A következő kódot írd be az <strong>index.html</strong> fájlba:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="hu"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Weboldalam&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Üdvözöllek a weboldalamon!&lt;/h1&gt;
+    &lt;p&gt;Ez egy egyszerű HTML weboldal.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <p>A fenti kódban a következők találhatók:</p>
+        <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code>: Azt jelzi a böngészőnek, hogy HTML5 dokumentummal van dolga.</li>
+            <li><code>&lt;html lang="hu"&gt;</code>: A dokumentum nyelve magyar.</li>
+            <li><code>&lt;head&gt;</code>: Itt találhatóak a metaadatok, például a karakterkódolás és az oldal címe.</li>
+            <li><code>&lt;body&gt;</code>: Az oldal tartalma, amely megjelenik a böngészőben.</li>
+        </ul>
+
+        <h2>3. lépés: CSS hozzáadása a megjelenéshez</h2>
+        <p>A CSS (Cascading Style Sheets) határozza meg a weboldal kinézetét. Létrehozhatsz egy külön CSS fájlt, hogy az oldal kinézetét formázd:</p>
+        <ul>
+            <li>Hozz létre egy új fájlt a mappádban, és nevezd el <strong>styles.css</strong>-nek.</li>
+            <li>Írd be a következő kódot a <strong>styles.css</strong> fájlba:</li>
+        </ul>
+        <pre><code>body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}</code></pre>
+        <p>Ez a CSS egyszerűen megadja, hogy az oldal fehér hátterű legyen, középre igazított tartalommal, és szép, tiszta kinézettel.</p>
+        <p>Most térj vissza az <strong>index.html</strong> fájlba, és a <code>&lt;head&gt;</code> szekcióban add hozzá a következő sort:</p>
+        <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+        <p>Ez a link összekapcsolja a HTML fájlt a CSS fájloddal.</p>
+
+        <h2>4. lépés: Oldal tesztelése és finomítása</h2>
+        <p>Nyisd meg az <strong>index.html</strong> fájlt egy böngészőben (például a Chrome vagy Firefox használatával), hogy megnézd, hogyan néz ki az oldalad. Ha mindent helyesen csináltál, egy egyszerű, szöveges weboldalt kell látnod, amely a CSS segítségével szépen formázva jelenik meg.</p>
+        <p>Kísérletezhetsz további HTML elemek (például képek, linkek, listák) hozzáadásával, hogy jobban megértsd, hogyan működnek a weboldalak.</p>
+
+        <a href="index.html">Vissza a főoldalra</a>
+    </div>
+</body>
+</html>
