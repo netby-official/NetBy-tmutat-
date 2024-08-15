@@ -54,8 +54,19 @@ const funFacts = [
     "A CSS változók lehetővé teszik a dinamikus stílusokat, amelyeket könnyen lehet újra felhasználni egy projektben.",
     "A HTML lehetőséget biztosít arra, hogy képeket, videókat és multimédiás tartalmakat ágyazz be a weboldalba.",
     "A webfejlesztésben a 'full-stack' fejlesztő olyan szakember, aki mind a frontend, mind a backend technológiákhoz ért.",
-    "A JSON (JavaScript Object Notation) egy könnyű adatcsere formátum, amelyet gyakran használnak az API-k kommunikációjára."
+    "A JSON (JavaScript Object Notation) egy könnyű adatcsere formátum, amelyet gyakran használnak az API-k kommunikációjára.",
+    "A Unity egy népszerű játékmotor, amely lehetővé teszi a 2D és 3D játékok fejlesztését.",
+    "A C# nyelvet gyakran használják a Unity játékfejlesztéshez.",
+    "A GameMaker Studio egy olyan eszköz, amely lehetővé teszi a játékok készítését minimális programozási ismeretekkel.",
+    "A Unreal Engine az egyik legfejlettebb játékmotor, amelyet AAA kategóriás játékokhoz használnak.",
+    "A Pixel Art egy népszerű grafikai stílus a retro játékokban.",
+    "A játékkészítés során fontos a karakterek és a világ részletes kidolgozása, hogy a játékosok bele tudjanak merülni a játék világába.",
+    "A játékmenet (gameplay) az egyik legfontosabb elem egy játék sikerességében.",
+    "A VR (Virtual Reality) technológia lehetővé teszi, hogy a játékosok teljesen elmerüljenek a virtuális világban.",
+    "A fizikai motorok, mint a Box2D és a PhysX, segítenek a játékokban a valósághű mozgások és interakciók létrehozásában.",
+    "A játékfejlesztés iteratív folyamat, amelyben a prototípusok készítése és a tesztelés kulcsszerepet játszik."
 ];
+
 
 
 document.getElementById('funFact').textContent = funFacts[Math.floor(Math.random() * funFacts.length)];
