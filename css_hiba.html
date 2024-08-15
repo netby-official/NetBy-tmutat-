@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amikor nem jelenik meg a CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Amikor nem jelenik meg a CSS</h1>
+        <p>Ha a weboldalon nem töltődnek be a CSS stílusok, próbáld ki az alábbi lépéseket a probléma megoldására.</p>
+
+        <h2>1. lépés: Ellenőrizd a CSS fájl elérési útját</h2>
+        <p>Győződj meg róla, hogy a CSS fájl helyesen van megadva:</p>
+        <ul>
+            <li>Nyisd meg a HTML fájlt, és ellenőrizd a <code>&lt;link&gt;</code> tagot, amely a CSS fájlra mutat:</li>
+            <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+            <li>Győződj meg arról, hogy az <code>href</code> attribútumban megadott elérési út helyes és a fájl létezik.</li>
+        </ul>
+
+        <h2>2. lépés: Ellenőrizd a CSS fájl szintaxist</h2>
+        <p>Hibás szintaxis is okozhatja, hogy a CSS nem töltődik be:</p>
+        <ul>
+            <li>Nyisd meg a CSS fájlt, és keresd meg a szintaxis hibákat.</li>
+            <li>Használj egy CSS validátor eszközt, például a [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), hogy ellenőrizd a CSS fájl helyességét.</li>
+        </ul>
+
+        <h2>3. lépés: Ellenőrizd a böngésző gyorsítótárát</h2>
+        <p>A böngésző gyorsítótára okozhat problémát a stílusok frissítésében:</p>
+        <ul>
+            <li>Próbáld meg törölni a böngésző gyorsítótárát, és frissítsd az oldalt.</li>
+            <li>Használj inkognitó módot a böngészőben a gyorsítótár mentes ellenőrzéshez.</li>
+        </ul>
+
+        <h2>4. lépés: Ellenőrizd a CSS fájl betöltési sorrendjét</h2>
+        <p>Ha több CSS fájl is van, győződj meg arról, hogy a betöltési sorrend helyes:</p>
+        <ul>
+            <li>Ha a CSS fájlok egymásra épülnek, ellenőrizd, hogy a fájlok helyes sorrendben vannak-e betöltve.</li>
+            <li>Példa:</li>
+            <pre><code>&lt;link rel="stylesheet" href="reset.css"&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+        </ul>
+
+        <h2>5. lépés: Ellenőrizd a CSS fájl kiterjesztését</h2>
+        <p>Győződj meg arról, hogy a CSS fájl kiterjesztése helyes:</p>
+        <ul>
+            <li>Az CSS fájlok kiterjesztése <code>.css</code> kell legyen.</li>
+            <li>Győződj meg arról, hogy a fájl nem véletlenül <code>.txt</code> vagy más formátumban van.</li>
+        </ul>
+
+        <a href="index.html">Vissza a főoldalra</a>
+    </div>
+</body>
+</html>

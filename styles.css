@@ -103,10 +103,13 @@ input[type="text"]:focus {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
-    background-color: #f1f1f1; /* Lábbalabb háttérszín */
-    padding: 10px 14px; /* Kényelmesebb padding */
+    background-color: #f1f1f1;
+    padding: 0 14px;
     border-radius: 8px;
 }
+
+
+
 
 /* Listaelemek */
 .accordion-content ul li {
@@ -119,8 +122,9 @@ input[type="text"]:focus {
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 500px; /* Megnövelt magasság */
+    max-height: 500px; /* Adjust this value as needed */
 }
+
 
 /* Visszajelzés gomb */
 .feedback-button {
