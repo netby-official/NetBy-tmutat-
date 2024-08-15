@@ -9,28 +9,60 @@
 <body>
     <div class="container">
         <h1>Játék készítése Unity-ben</h1>
-        <p>A Unity egy népszerű és könnyen használható játékmotor, amelyet széles körben használnak 2D és 3D játékok fejlesztésére.</p>
+        <p>A Unity egy népszerű és könnyen használható játékmotor, amelyet széles körben használnak 2D és 3D játékok fejlesztésére. Ebben az útmutatóban lépésről lépésre bemutatjuk, hogyan készíthetsz saját játékot a Unity segítségével.</p>
         
         <h2>1. lépés: Unity telepítése</h2>
-        <p>A fejlesztés megkezdéséhez töltsd le és telepítsd a Unity Hub-ot, majd a Unity Editor-t:</p>
+        <p>A játékfejlesztés megkezdéséhez először is telepítened kell a Unity-t, amely tartalmazza a Unity Hub-ot és a Unity Editort:</p>
         <ul>
-            <li>Látogass el a <a href="https://unity.com" target="_blank">Unity weboldalára</a>, és töltsd le a Unity Hub-ot.</li>
-            <li>Nyisd meg a Unity Hub-ot, és telepítsd a legújabb Unity Editor verziót.</li>
+            <li>Látogass el a <a href="https://unity.com" target="_blank">Unity weboldalára</a>, és kattints a „Get Started” (Kezdd el) gombra, majd válaszd ki a megfelelő csomagot (pl. Personal, ha ingyenes verziót szeretnél).</li>
+            <li>Töltsd le és telepítsd a Unity Hub-ot, ami egy központi alkalmazás, amelyen keresztül kezelheted a Unity telepítéseidet és projektjeidet.</li>
+            <li>A Unity Hub megnyitása után kattints az „Installs” (Telepítések) fülre, majd a „Install Editor” (Editor telepítése) gombra, hogy letöltsd és telepítsd a legújabb Unity Editor verziót.</li>
+            <li>Választhatod ki a szükséges bővítményeket is, mint például Android vagy iOS támogatás, ha mobil platformra is fejleszteni szeretnél.</li>
         </ul>
         
         <h2>2. lépés: Új projekt létrehozása</h2>
-        <p>A telepítés után hozz létre egy új projektet:</p>
+        <p>Miután telepítetted a Unity-t, létrehozhatsz egy új projektet, amelyben elkezdheted a játékod fejlesztését:</p>
         <ul>
-            <li>Nyisd meg a Unity Hub-ot, és válaszd az „Új projekt” opciót.</li>
-            <li>Válaszd ki a projekt típusát (2D vagy 3D), nevezd el a projektet, és állítsd be a mentési helyét.</li>
-            <li>Kattints a „Create” gombra.</li>
+            <li>Nyisd meg a Unity Hub-ot, és kattints az „Új projekt” (New Project) gombra.</li>
+            <li>Válaszd ki a projekt típusát, attól függően, hogy 2D vagy 3D játékot szeretnél készíteni. A 2D opció ideális platformer vagy puzzle játékokhoz, míg a 3D opció hasznos lehet lövöldözős vagy kalandjátékokhoz.</li>
+            <li>Adj nevet a projektednek, és válaszd ki, hova szeretnéd menteni a fájlokat a számítógépeden.</li>
+            <li>Kattints a „Create” (Létrehozás) gombra, hogy a Unity létrehozza a projekt struktúráját és megnyissa a Unity Editort.</li>
         </ul>
         
         <h2>3. lépés: Játékmenet létrehozása</h2>
-        <p>A Unity Editor segítségével elkezdheted a játék elemeinek hozzáadását és a játékmenet kialakítását:</p>
+        <p>Most, hogy van egy projekted, elkezdheted a játékmenet kialakítását a Unity Editor segítségével:</p>
         <ul>
-            <li>Használd a Scene ablakot a játék jeleneteinek megtervezéséhez és a 2D vagy 3D objektumok elhelyezéséhez.</li>
-            <li>Írj C# kódot a játékmenet logikájának létrehozásához.</li>
+            <li>Használd a „Scene” ablakot a játék jeleneteinek megtervezéséhez. Itt helyezheted el a különböző 2D vagy 3D objektumokat, mint például a karaktereket, tárgyakat vagy díszleteket. Az ablakban lévő kameranézet segítségével át tudod mozgatni és méretezni ezeket az objektumokat.</li>
+            <li>Objektumokat adhatsz hozzá a „Hierarchy” panel segítségével. Például, ha egy új karaktert szeretnél hozzáadni a jelenethez, kattints a jobb gombbal a Hierarchy panelre, válaszd a „3D Object” vagy „2D Object” lehetőséget, és válaszd ki a megfelelő elemet (pl. Cube, Sphere, Sprite, stb.).</li>
+            <li>A játék logikájának létrehozásához írj C# szkripteket. Kattints a „Assets” (Eszközök) menüben a „Create” (Létrehozás) gombra, válaszd a „C# Script” opciót, és adj nevet a szkriptednek. A szkripteket a „MonoDevelop” vagy „Visual Studio” segítségével szerkesztheted, és itt adhatod meg a játékmenet szabályait, például hogy egy karakter hogyan mozogjon vagy reagáljon a játékos inputjára.</li>
+            <li>Kapcsold össze a szkripteket és objektumokat úgy, hogy a scriptet egyszerűen ráhúzod a megfelelő objektumra a „Hierarchy” panelen. Így a script irányítani tudja az adott objektum viselkedését.</li>
+            <li>Próbáld ki a játékmenetet a „Play” gombra kattintva a Unity Editorban. Itt láthatod, hogyan működik a játékod, és szükség esetén módosíthatod a beállításokat.</li>
+        </ul>
+
+        <h2>4. lépés: Karakterek és objektumok hozzáadása</h2>
+        <p>Most, hogy a játékmenet alapjai megvannak, adj hozzá karaktereket és objektumokat, hogy a játék élvezetesebb legyen:</p>
+        <ul>
+            <li>Importálj 3D modelleket, textúrákat és hangokat a projektedbe. Ehhez egyszerűen húzd be a fájlokat a Unity Editor „Assets” (Eszközök) mappájába. Ezeket az erőforrásokat a „Scene” ablakban tudod elhelyezni és módosítani.</li>
+            <li>Ha nincs saját modelled, használhatod a Unity Asset Store-t, ahol ingyenes és fizetős tartalmakat is találsz. Egyszerűen keresd meg a szükséges elemeket, és kattints a „Download” (Letöltés) gombra, majd importáld őket a projektedbe.</li>
+            <li>A karakterek mozgásának beállításához használhatod az „Animator” eszközt. Az Animator segítségével animációkat hozhatsz létre és adhatsz a karaktereidhez, például futás, ugrás vagy támadás mozdulatokat.</li>
+            <li>Az objektumok interakcióit szintén szkriptek segítségével alakíthatod ki. Például, ha egy ajtót szeretnél nyithatóvá tenni, készíthetsz egy scriptet, amely érzékeli a játékos közelségét és megnyitja az ajtót.</li>
+        </ul>
+
+        <h2>5. lépés: A játék tesztelése és hibakeresés</h2>
+        <p>A játékfejlesztés során fontos, hogy folyamatosan teszteld a játékod, és javítsd ki az esetleges hibákat:</p>
+        <ul>
+            <li>Rendszeresen kattints a „Play” gombra a Unity Editorban, hogy kipróbáld, hogyan működik a játékod. Nézd meg, hogyan reagálnak a karakterek és objektumok a játékos irányítására.</li>
+            <li>Ha hibát találsz, a „Console” ablakban megjelenő üzenetek segítenek azonosítani a problémát. Ezek az üzenetek általában megmutatják, melyik scriptben van hiba, és milyen típusú hiba történt.</li>
+            <li>Használhatod a „Debug.Log” parancsot a szkriptekben, hogy nyomon követhesd, mi történik a játékban. Ez különösen hasznos lehet, ha egy bizonyos esemény vagy állapot megfigyelésére van szükséged.</li>
+            <li>Teszteld a játékodat különböző eszközökön, például PC-n, mobilon vagy konzolon, hogy biztos lehess abban, hogy minden platformon jól működik. Ehhez a Unity Editor „Build Settings” menüjében választhatod ki a célplatformot.</li>
+        </ul>
+
+        <h2>6. lépés: A játék publikálása</h2>
+        <p>Miután elkészült a játékod, készen állsz arra, hogy publikáld azt és megoszd a világgal:</p>
+        <ul>
+            <li>A „File” menüben válaszd a „Build Settings” lehetőséget, majd válaszd ki a célplatformot, amire ki szeretnéd adni a játékot (pl. Windows, Mac, Android, iOS, stb.). Kattints a „Build” gombra, hogy a Unity elkészítse a játék futtatható verzióját.</li>
+            <li>Ha szeretnéd, feltöltheted a játékodat különböző online áruházakba, például a Steam-re, a Google Play Áruházba vagy az Apple App Store-ba. Ehhez általában szükséged lesz egy fejlesztői fiókra, és be kell tartanod az adott platform irányelveit.</li>
+            <li>A publikálás előtt érdemes több tesztet is lefuttatni, hogy biztos lehess abban, hogy a játékod mentes minden hibától és készen áll a felhasználók számára.</li>
         </ul>
         
         <a href="index.html">Vissza a főoldalra</a>

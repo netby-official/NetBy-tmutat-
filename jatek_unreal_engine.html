@@ -9,29 +9,56 @@
 <body>
     <div class="container">
         <h1>Játék készítése Unreal Engine-ben</h1>
-        <p>Az Unreal Engine egy erőteljes játékmotor, amelyet profi játékfejlesztők használnak világszerte. Az alábbiakban bemutatjuk az alapokat, hogy elindulhass a játékfejlesztés útján.</p>
+        <p>Az Unreal Engine egy erőteljes játékmotor, amelyet sok játékfejlesztő használ. Az alábbi útmutatóban lépésről lépésre bemutatjuk, hogyan hozhatsz létre egy egyszerű játékot.</p>
         
         <h2>1. lépés: Unreal Engine telepítése</h2>
-        <p>A fejlesztés megkezdéséhez töltsd le és telepítsd az Unreal Engine-t az Epic Games Launcher segítségével.</p>
+        <p>Először is telepítened kell az Unreal Engine-t, hogy használni tudd a játékmotort:</p>
         <ul>
-            <li>Látogass el az <a href="https://www.unrealengine.com" target="_blank">Unreal Engine weboldalára</a>, és töltsd le az Epic Games Launchert.</li>
-            <li>A telepítés után nyisd meg a Launchert, és telepítsd az Unreal Engine-t.</li>
+            <li>Látogass el az <a href="https://www.unrealengine.com" target="_blank">Unreal Engine weboldalára</a>, és kattints a „Get Started” (Kezdd el) gombra.</li>
+            <li>Töltsd le az Epic Games Launchert, ami egy program, amivel kezelheted az Unreal Engine telepítését és frissítéseit.</li>
+            <li>A Launcher telepítése után indítsd el, és a „Library” (Könyvtár) fülön keresd meg az Unreal Engine legfrissebb verzióját, majd kattints a „Install” (Telepítés) gombra.</li>
         </ul>
         
         <h2>2. lépés: Új projekt létrehozása</h2>
-        <p>A telepítés után hozz létre egy új projektet:</p>
+        <p>Miután telepítetted az Unreal Engine-t, itt az ideje, hogy létrehozz egy új projektet, ahol elkezdheted a játékod fejlesztését:</p>
         <ul>
-            <li>Nyisd meg az Unreal Engine-t, és válaszd az „Új projekt” opciót.</li>
-            <li>Válaszd ki a játék típusát, például „Third Person” vagy „First Person”.</li>
-            <li>Nevezd el a projektet, és állítsd be a mentési helyét.</li>
-            <li>Kattints a „Create” gombra.</li>
+            <li>Nyisd meg az Unreal Engine-t az Epic Games Launcher segítségével.</li>
+            <li>Az indító képernyőn válaszd az „Új projekt” opciót.</li>
+            <li>Válaszd ki a projekt típusát. Például, ha egy 3D-s játékot szeretnél készíteni, válaszd a „Third Person” (Harmadik személy) sablont, ami alapból tartalmaz egy karaktert, aki mozogni tud.</li>
+            <li>Adj nevet a projektednek, és válaszd ki, hova szeretnéd menteni a fájlokat a számítógépeden.</li>
+            <li>Kattints a „Create” (Létrehozás) gombra, hogy létrejöjjön a projekted.</li>
         </ul>
-        
+
         <h2>3. lépés: Alapvető játékmenet létrehozása</h2>
-        <p>Most, hogy a projekt készen áll, elkezdheted a játékmenet kialakítását:</p>
+        <p>Most, hogy megvan az alap projekted, elkezdheted kialakítani a játékmenetet:</p>
         <ul>
-            <li>Használd az Unreal Editor eszközeit a pálya tervezéséhez, karakterek elhelyezéséhez és a játékmenet logikájának kialakításához.</li>
-            <li>Készítsd el a karakter mozgását a Blueprint-ek vagy C++ kód segítségével.</li>
+            <li>Az Unreal Editor bal oldalán találod a „Place Actors” panelt, ahol különböző elemeket, például fákat, épületeket vagy karaktereket adhatsz hozzá a pályához. Egyszerűen húzd ezeket az elemeket a játékterületre.</li>
+            <li>A karakter mozgását és más játékmenet elemeket „Blueprint” segítségével készítheted el. A Blueprint egy olyan vizuális eszköz, amivel kódolás nélkül tudsz logikát kialakítani. Például készíthetsz egy Blueprint-et, ami azt határozza meg, hogy mi történik, amikor a játékos egy tárgyra lép.</li>
+            <li>Próbáld ki a játékmenetet az Editorban a „Play” gombra kattintva. Itt tudod megnézni, hogyan működik a játékod, és ha szükséges, módosíthatod a beállításokat.</li>
+        </ul>
+
+        <h2>4. lépés: Karakterek és objektumok hozzáadása</h2>
+        <p>Most, hogy a játékmenet alapjai megvannak, adj hozzá karaktereket és objektumokat, hogy élettel töltsd meg a játékot:</p>
+        <ul>
+            <li>Ha saját karaktereket vagy tárgyakat szeretnél használni, importálhatod őket az „Import” gombra kattintva. Ezzel be tudsz húzni 3D modelleket, textúrákat vagy hangokat, amiket a játékodban szeretnél használni.</li>
+            <li>A pálya díszítéséhez és élethűbbé tételéhez adj hozzá különböző objektumokat, például fákat, épületeket vagy járműveket a „Place Actors” panelből.</li>
+            <li>A karakterek viselkedését beállíthatod az „Animation” és az „AI” (mesterséges intelligencia) eszközök segítségével. Például beállíthatod, hogy egy ellenfél hogyan reagáljon a játékos mozgására.</li>
+        </ul>
+
+        <h2>5. lépés: A játék tesztelése és hibakeresés</h2>
+        <p>A játék készítése során fontos, hogy rendszeresen teszteld a játékmenetet, és kijavítsd a hibákat:</p>
+        <ul>
+            <li>Kattints a „Play” gombra, hogy lefuttasd a játékot, és kipróbáld, hogyan működik. Ha hibát találsz, visszaléphetsz az Editorba, és javíthatod azt.</li>
+            <li>Az Unreal Engine-ben van egy „Debugging” eszköz, amivel megkeresheted és javíthatod a hibákat. Például, ha egy karakter nem mozog úgy, ahogy kellene, a Debugging eszköz megmutatja, mi lehet a probléma.</li>
+            <li>Futtass több tesztet különböző eszközökön (PC, mobil, stb.), hogy megbizonyosodj arról, hogy a játék minden platformon jól működik.</li>
+        </ul>
+
+        <h2>6. lépés: A játék publikálása</h2>
+        <p>Miután befejezted a játékod, készen állsz arra, hogy publikáld azt a világ számára:</p>
+        <ul>
+            <li>Válaszd ki, melyik platformra szeretnéd kiadni a játékot. Az Unreal Engine lehetővé teszi, hogy különböző platformokra (pl. PC, konzol, mobil) exportáld a játékodat.</li>
+            <li>Kattints a „File” menüben az „Package Project” opcióra, és válaszd ki a célplatformot (például Windows). Az Unreal Engine elkészíti a játék végleges verzióját, amit majd megoszthatsz másokkal.</li>
+            <li>Ha szeretnéd, feltöltheted a játékodat egy online áruházba, például a Steam-re vagy az Epic Games Store-ra, ahol mások is letölthetik és játszhatnak vele.</li>
         </ul>
         
         <a href="index.html">Vissza a főoldalra</a>

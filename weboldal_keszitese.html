@@ -10,16 +10,24 @@
     <div class="container">
         <h1>Weboldal készítése</h1>
         <p>Ez az útmutató részletesen bemutatja, hogyan hozhatsz létre egy egyszerű weboldalt, még akkor is, ha sosem csináltál ilyet korábban.</p>
-        
-        <h2>1. lépés: HTML fájl létrehozása</h2>
+
+        <h2>1. lépés: Eszközök telepítése</h2>
+        <p>Első lépésként szükséged lesz egy szövegszerkesztőre, amellyel létrehozhatod és szerkesztheted a weboldalad fájljait. Az alábbi két ingyenes program közül választhatsz:</p>
+        <ul>
+            <li><a href="https://notepad-plus-plus.org/downloads/" target="_blank">Notepad++ letöltése</a> - Egyszerű, könnyen használható szövegszerkesztő.</li>
+            <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code letöltése</a> - Fejlettebb, több funkcióval rendelkező szerkesztő, amely szintén ingyenes.</li>
+        </ul>
+        <p>Telepítsd fel a kiválasztott szerkesztőt, majd folytasd az alábbi lépésekkel.</p>
+
+        <h2>2. lépés: HTML fájl létrehozása</h2>
         <p>A HTML (HyperText Markup Language) a weboldalak alapvető építőköve. Egy egyszerű HTML fájl létrehozásához:</p>
         <ul>
-            <li>Nyiss meg egy szövegszerkesztőt (például a Notepad++ vagy a Visual Studio Code programot).</li>
+            <li>Nyisd meg a telepített szövegszerkesztőt (például a Notepad++ vagy a Visual Studio Code programot).</li>
             <li>Hozz létre egy új fájlt, és nevezd el <strong>index.html</strong>-nek.</li>
             <li>Mentsd el a fájlt a számítógépeden egy új mappában, például „weboldalam” néven.</li>
         </ul>
 
-        <h2>2. lépés: Alapvető HTML struktúra kialakítása</h2>
+        <h2>3. lépés: Alapvető HTML struktúra kialakítása</h2>
         <p>A következő lépés a HTML fájl struktúrájának megadása. Ez határozza meg, hogy a böngésző hogyan értelmezze a tartalmat. A következő kódot írd be az <strong>index.html</strong> fájlba:</p>
         <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="hu"&gt;
@@ -37,11 +45,11 @@
         <ul>
             <li><code>&lt;!DOCTYPE html&gt;</code>: Azt jelzi a böngészőnek, hogy HTML5 dokumentummal van dolga.</li>
             <li><code>&lt;html lang="hu"&gt;</code>: A dokumentum nyelve magyar.</li>
-            <li><code>&lt;head&gt;</code>: Itt találhatóak a metaadatok, például a karakterkódolás és az oldal címe.</li>
+            <li><code>&lt;head&gt;</code>: Itt találhatók a metaadatok, például a karakterkódolás és az oldal címe.</li>
             <li><code>&lt;body&gt;</code>: Az oldal tartalma, amely megjelenik a böngészőben.</li>
         </ul>
 
-        <h2>3. lépés: CSS hozzáadása a megjelenéshez</h2>
+        <h2>4. lépés: CSS hozzáadása a megjelenéshez</h2>
         <p>A CSS (Cascading Style Sheets) határozza meg a weboldal kinézetét. Létrehozhatsz egy külön CSS fájlt, hogy az oldal kinézetét formázd:</p>
         <ul>
             <li>Hozz létre egy új fájlt a mappádban, és nevezd el <strong>styles.css</strong>-nek.</li>
@@ -66,7 +74,22 @@
         <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
         <p>Ez a link összekapcsolja a HTML fájlt a CSS fájloddal.</p>
 
-        <h2>4. lépés: Oldal tesztelése és finomítása</h2>
+        <h2>5. lépés: HTML elemek használata</h2>
+        <p>Az alábbiakban bemutatunk néhány alapvető HTML elemet, amelyeket felhasználhatsz az oldalad kialakításához:</p>
+        <ul>
+            <li><code>&lt;h1&gt;&lt;/h1&gt;</code>: Ezzel a címkét használhatod, hogy főcímet hozz létre az oldalon. Például: <code>&lt;h1&gt;Főcím&lt;/h1&gt;</code></li>
+            <li><code>&lt;p&gt;&lt;/p&gt;</code>: Ezzel a címkével bekezdést hozhatsz létre. Például: <code>&lt;p&gt;Ez egy bekezdés.&lt;/p&gt;</code></li>
+            <li><code>&lt;a href="url"&gt;&lt;/a&gt;</code>: Ezzel a címkével linket hozhatsz létre egy másik oldalra vagy fájlra. Például: <code>&lt;a href="https://example.com"&gt;Kattints ide!&lt;/a&gt;</code></li>
+            <li><code>&lt;img src="url" alt="leírás"&gt;</code>: Ezzel a címkével képet szúrhatsz be az oldaladra. Például: <code>&lt;img src="kep.jpg" alt="Leírás a képről"&gt;</code></li>
+            <li><code>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</code>: Ezzel a címkével listát hozhatsz létre. Például:
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;Első elem&lt;/li&gt;
+    &lt;li&gt;Második elem&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </li>
+        </ul>
+
+        <h2>6. lépés: Oldal tesztelése és finomítása</h2>
         <p>Nyisd meg az <strong>index.html</strong> fájlt egy böngészőben (például a Chrome vagy Firefox használatával), hogy megnézd, hogyan néz ki az oldalad. Ha mindent helyesen csináltál, egy egyszerű, szöveges weboldalt kell látnod, amely a CSS segítségével szépen formázva jelenik meg.</p>
         <p>Kísérletezhetsz további HTML elemek (például képek, linkek, listák) hozzáadásával, hogy jobban megértsd, hogyan működnek a weboldalak.</p>
 
