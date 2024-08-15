@@ -1,16 +1,21 @@
 MIT License
 
-Copyright (c) [2024] [NetBy]
+Copyright (c) 2024 NetByCo
 
-A weboldal tartalmának és kódjának (a továbbiakban "Weboldal") használatára az alábbi feltételek vonatkoznak:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. **Szabad Felhasználás**: A Weboldal szabadon használható, másolható, módosítható, terjeszthető, vagy bármilyen más módon felhasználható. A felhasználás során meg kell tartani az alábbiakat:
-   - Az eredeti szerzői jogi nyilatkozatot,
-   - Az MIT Licencet.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-2. **Nincs Garancia**: A Weboldal "ahogyan van" alapon kerül biztosításra, és nem vállalunk semmilyen garanciát, kifejezett vagy vélelmezett, beleértve a forgalomképességet vagy a konkrét célra való alkalmasságot. Sem a szerzők, sem a hozzájárulók nem vállalnak felelősséget semmilyen közvetlen, közvetett, véletlen, különleges vagy következményes kárért, beleértve, de nem korlátozva az üzleti megszakításokat, adatvesztéseket vagy pénzügyi veszteségeket, amelyek a Weboldal használatából erednek.
-
-A fentiek elfogadása a Weboldal használatával és terjesztésével egyetértést jelent.
-
-[2024]: Az év, amikor a weboldal készült vagy az év, amikor a licencet kiadták.
-[NetBy]: A szerző neve vagy a projekt neve.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
